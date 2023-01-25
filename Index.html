@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"/>
     <title>Loja de Roupa Online</title>
 </head>
 <body>
@@ -14,6 +15,16 @@
                 <div class="logo"></div>
                 <div class="desktop-menu">
                     <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Novidades</a></li>
+                        <li><a href="#">Destaques</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="mobile-menu">
+                    <i class="fa-solid fa-bars"></i>
+                    <ul id="myLinks">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Novidades</a></li>
                         <li><a href="#">Destaques</a></li>
@@ -34,6 +45,38 @@
                 </div>
             </div>
         </div>
+        <button id="back-to-top">^</button>
     </header>
+
+    <section class="max-width bg2" id="about">
+        <div class="container">
+            <div class="titulo">
+                <h2 class="text-md color-cinza-1">Novidades</h2>
+                <div class="line">
+                    <div class="text-titulo">Roupas</div>
+                </div>
+            </div>
+            <div class="down">
+                <div class="box">
+                    <img src="image/b1.png" alt="">
+                    <div class="text">
+                        <h2>Conjunto</h2>
+                        <p>Coleção de Inverno</p>
+                        <i class="fa-regular fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Back-to
+
+        var btn = document.querySelector("#back-to-top");
+
+        btn.addEventListener("click", function(){
+            scrollTo(0, 0)
+        });
+    </script>
 </body>
 </html>

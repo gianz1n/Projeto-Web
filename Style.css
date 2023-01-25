@@ -25,6 +25,13 @@ html, body{
     height: auto;
 }
 
+.bg2 {
+    background: url('image/bg-4.png')no-repeat;
+    background-size: cover ;
+    width: 100%;
+    height: auto;
+}
+
 .container {
     max-width: 1680px;
     margin: 0 auto;
@@ -32,6 +39,18 @@ html, body{
     align-items: center;
     justify-content: center;
     min-height: 95vh;
+}
+
+.titulo {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+    text-shadow: 0 0 10px #545454;
+    color: #2b2b2b;
 }
 
 .logo {
@@ -123,6 +142,28 @@ text-title {
     color: #545454;
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 2px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #8b634a;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    border: 1px solid #fff;
+} 
+
 /* Desktop-menu */
 
 .desktop-menu ul {
@@ -149,6 +190,52 @@ text-title {
     font-weight: 400;
     text-decoration: underline;
 }
+
+/* Mobile-Menu */
+
+.mobile-menu {
+    width: 95%;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    background: #c3bcb7;
+    display: none;
+}
+
+.mobile-menu i{
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    font-size: 23px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mobile-menu ul{
+    display: block;
+    text-align: center;
+}
+
+.mobile-menu ul li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+.mobile-menu ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #17203f;
+    text-shadow: 0 0 5px #848790;
+}
+
+.mobile-menu ul li a:hover{
+    color:#8b634a;
+    text-shadow: 0 0 5px #8b634a;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+
 /* Header */
 
 header .container {
@@ -218,6 +305,10 @@ header .right .imagem img {
         width: 100%;
     }
 
+    .mobile-menu {
+        display: block;
+    }
+
     .desktop-menu ul {
         display: none;
     }
@@ -235,5 +326,34 @@ header .right .imagem img {
         min-height: auto;
         padding:0 2%;
         margin-top: -60px;
+    }
+
+    .logo {
+        width: 110px;
+        top: 10px;
+        left: 5px;
+    }
+
+    img {
+        width: 90%;
+    }
+
+    .call {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    header .left{
+        margin-top: -100px;
+    }
+
+    header .right .imagem {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 428px){
+    header .right .imagem {
+        width: 80%;
     }
 }
